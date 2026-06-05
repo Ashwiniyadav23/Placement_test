@@ -4,14 +4,19 @@
     box-sizing:border-box;
     font-family:Arial, Helvetica, sans-serif;
 }
+body{
+    background:white;
+}
 
 .hero{
     height:100vh;
+    display:flex;
+    flex-direction:column;
+    position:relative;
 }
-
 .banner{
-    height:75%;
-    background-color: #278AC3;
+    flex:3;
+    background-color:#278AC3;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -19,10 +24,13 @@
 
 .banner img{
     width:60%;
+    height:auto;
+    max-height:70%;
+    object-fit:contain;
 }
 
-.content{
-    height:25%;
+.container{
+    flex:2;
     background:#0c3d5b;
     color:white;
     padding:30px 60px;
@@ -31,13 +39,12 @@
     justify-content:center;
 }
 
-
-.content h1{
+.container h1{
     font-size:52px;
     margin-bottom:15px;
 }
 
-.content p{
+.container p{
     max-width:600px;
     line-height:1.6;
     color:#d9e6ef;
@@ -47,6 +54,7 @@
 .btns{
     display:flex;
     gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
@@ -57,7 +65,6 @@
 }
 
 .btn-primary{
-    background:white;
     color:#0c3d5b;
 }
 
@@ -70,28 +77,21 @@
 .arrow{
     position:absolute;
     top:40%;
-    transform:translateY(-50%);
     color:white;
     font-size:30px;
     cursor:pointer;
     z-index:10;
 }
 
-.left{
-    left:20px;
-}
-
-.right{
-    right:20px;
-}
+.left{ left:20px; }
+.right{ right:20px; }
 
 .dots{
-    position:absolute;
-    bottom:15px;
-    left:50%;
-    transform:translateX(-50%);
     display:flex;
+    justify-content:center;
     gap:10px;
+    padding:15px 0;
+    background:#0c3d5b;
 }
 
 .dot{
@@ -104,4 +104,94 @@
 
 .dot.active{
     opacity:1;
+}
+#divs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    padding:20px;
+    margin-top:70px;
+}
+
+#divs h1{
+    width:100%;
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:40px;
+    font-weight:normal;
+}
+
+#div1,
+#div2,
+#div3,
+#div4{
+    flex:1;
+    min-width:250px;
+    height:500px;
+    background:#188e37;
+}
+
+@media (max-width: 1024px){
+    .container{
+        padding:25px 40px;
+    }
+    .container h1{
+        font-size:40px;
+    }
+    .banner img{
+        width:75%;
+    }
+}
+
+@media (max-width: 768px){
+
+    .hero{
+        height:auto;
+    }
+    .banner{
+        flex:2;
+        padding:20px;
+    }
+    .banner img{
+        width:90%;
+    }
+    .container{
+        flex:3;
+        padding:20px;
+        text-align:center;
+        align-items:center;
+    }
+
+    .container h1{
+        font-size:30px;
+    }
+
+    .container p{
+        font-size:14px;
+    }
+    .btns{
+        justify-content:center;
+    }
+
+    .arrow{
+        font-size:22px;
+    }
+    #divs{
+        padding:20px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .container h1{
+        font-size:24px;
+    }
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+    .arrow{
+        display:none;
+    }
 }
