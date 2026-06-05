@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero Banner</title>
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Banner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="hero">
 
     <div class="arrow left" onclick="prev()">&#10094;</div>
-    <div class="arrow right"  onclick="next()">&#10095;</div>
+    <div class="arrow right" onclick="next()">&#10095;</div>
 
     <div class="banner">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqjm91hDHzndj9n2L7GDe2w1prOq_G8Vz1A&s" id="slider" alt="Banner">
+        <img id="slider"
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqjm91hDHzndj9n2L7GDe2w1prOq_G8Vz1A&s"
+             alt="Banner">
+        <h3 id="text"></h3>
 
     </div>
+    
 
-    <div class="content">
+    <div class="container">
         <h1>Welcome Developer!</h1>
 
         <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Numquam suscipit velit similique odit hic, molestias delectus tempora deserunt corrupti optio fuga.
-            Ab quisquam, itaque aliquid modi optio incidunt ea accusantium!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Numquam suscipit velit similique odit hic, molestias delectus tempora
+            deserunt corrupti optio fuga.
         </p>
 
         <div class="btns">
@@ -35,14 +38,23 @@
     </div>
 
     <div class="dots">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
 
 </div>
+
+<div id="divs">
+    <h1>Heading</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</div>
+
 <script src="script.js"></script>
 
 </body>
