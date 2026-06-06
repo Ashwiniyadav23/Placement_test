@@ -7,7 +7,6 @@
 body{
     background:white;
 }
-
 .hero{
     height:100vh;
     display:flex;
@@ -16,10 +15,11 @@ body{
 }
 .banner{
     flex:3;
-    background-color:#278AC3;
+    background-color:#225fd8;
     display:flex;
     justify-content:center;
     align-items:center;
+    position:relative;
 }
 
 .banner img{
@@ -50,7 +50,6 @@ body{
     color:#d9e6ef;
     margin-bottom:20px;
 }
-
 .btns{
     display:flex;
     gap:15px;
@@ -65,6 +64,7 @@ body{
 }
 
 .btn-primary{
+    background:white;
     color:#0c3d5b;
 }
 
@@ -73,18 +73,30 @@ body{
     border:1px solid white;
     color:white;
 }
-
 .arrow{
     position:absolute;
-    top:40%;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     color:white;
-    font-size:30px;
+    border-radius:50%;
+    font-size:28px;
     cursor:pointer;
-    z-index:10;
+    z-index:9999;
+    user-select:none;
 }
 
-.left{ left:20px; }
-.right{ right:20px; }
+.left{
+    left:15px;
+}
+
+.right{
+    right:15px;
+}
 
 .dots{
     display:flex;
@@ -113,15 +125,11 @@ body{
     padding:20px;
     margin-top:70px;
 }
-
 #divs h1{
     width:100%;
     text-align:center;
-    margin-top:40px;
-    margin-bottom:40px;
     font-weight:normal;
 }
-
 #div1,
 #div2,
 #div3,
@@ -131,30 +139,30 @@ body{
     height:500px;
     background:#188e37;
 }
-
-@media (max-width: 1024px){
+@media (max-width:1024px){
     .container{
         padding:25px 40px;
     }
     .container h1{
         font-size:40px;
     }
+
     .banner img{
         width:75%;
     }
 }
-
-@media (max-width: 768px){
-
+@media (max-width:768px){
     .hero{
         height:auto;
     }
+
     .banner{
         flex:2;
         padding:20px;
     }
+
     .banner img{
-        width:90%;
+        width:70%;
     }
     .container{
         flex:3;
@@ -162,36 +170,52 @@ body{
         text-align:center;
         align-items:center;
     }
-
     .container h1{
         font-size:30px;
     }
-
     .container p{
         font-size:14px;
     }
     .btns{
         justify-content:center;
     }
-
     .arrow{
+        width:40px;
+        height:40px;
         font-size:22px;
+        left:10px;
+    }
+    .right{
+        right:10px;
+        left:auto;
     }
     #divs{
-        padding:20px;
+        padding:15px;
     }
 }
 
-@media (max-width: 480px){
-
+@media (max-width:480px){
     .container h1{
         font-size:24px;
+    }
+    .container p{
+        font-size:13px;
     }
     .btn{
         width:100%;
         text-align:center;
     }
     .arrow{
-        display:none;
+        display:flex; 
+        width:35px;
+        height:35px;
+        font-size:18px;
+        z-index:9999;
+    }
+    .left{
+        left:5px;
+    }
+    .right{
+        right:5px;
     }
 }
