@@ -15,7 +15,7 @@ body{
 }
 .banner{
     flex:3;
-    background-color:#225fd8;
+    background-color:#1A9CDA;
     display:flex;
     justify-content:center;
     align-items:center;
