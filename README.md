@@ -49,12 +49,9 @@ A responsive landing page built using HTML, CSS, and JavaScript.
 1. Download or clone the repository.
 2. Open `index.html` in your browser.
 
-## Live Demo
+## Live Demo: https://placement-test-murex.vercel.app/
 
-Add your deployed project link here.
 
-## GitHub Repository
 
-Add your GitHub repository link here.
 
 
